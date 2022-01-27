@@ -1,5 +1,6 @@
-import { SupraMap } from 'supramap'
-const m = new SupraMap()
+#!/usr/bin/env node
+import { Supramap } from './supramap.mjs'
+const m = new Supramap()
 
 // .types
 console.log(m.types)
@@ -33,6 +34,6 @@ console.log(query2[0].json())
 m.save('data/test.json')
 
 // .load(filename)
-const y = new SupraMap()
+const y = new Supramap()
 y.load('data/test.json')
 console.log(y.json())

@@ -2,17 +2,11 @@
   "name": "supramap",
   "description": "Lightweight data store",
   "url": "http://github.com/digplan/supramap",
-  "author": "",
   "main": "supramap.mjs",
-  "dependencies": {
-    "testchrome": "*"
-  },
-  "scripts": {
-    "test": "node test.mjs"
-  },
   "repository": {
     "type": "git",
     "url": "git://github.com/digplan/supramap.git"
   },
+  "bin": "./test.mjs",
   "version": "0.0.1"
 }

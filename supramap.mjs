@@ -2,7 +2,7 @@ import fs from 'node:fs'
 import BaseType from './basetype.mjs'
 import Types from './types.mjs'
 
-export default class SuperMap extends Map {
+class Supramap extends Map {
 
     types = Types
 
@@ -55,3 +55,5 @@ export default class SuperMap extends Map {
     }
 
 }
+
+export {Supramap}

@@ -12,6 +12,7 @@ class person extends entity {
     nickname
     email
     phone
+    picture
 }
 
 class employee extends person {
@@ -60,6 +61,16 @@ class keypair {
     type
 }
 
+class country {
+    name
+    abbr
+    code
+}
+
+class language {
+    name
+}
+
 export default {
     "entity": entity,
     "person": person,
@@ -68,5 +79,7 @@ export default {
     "groupmember": groupmember,
     "timezone": timezone,
     "location": location,
-    "keypair": keypair
+    "keypair": keypair,
+    "country": country,
+    "language": language
 }

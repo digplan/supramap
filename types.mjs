@@ -1,13 +1,38 @@
 import BaseType from './basetype.mjs'
 
-class person extends BaseType {
-    age = 40  // default value
+class entity extends BaseType {
+    // age = 40  // default value
     // Street // required value
-    upd
 }
 
-class nicePerson extends person {
-   
+class person extends entity {
+    firstname
+    middlename
+    lastname
+    nickname
+    email
+    phone
+}
+
+class employee extends person {
+    employeenumber
+    title
+    department
+    company
+    hiredate
+    termdate
+    manager
+    worktype
+}
+
+class group extends entity {
+    name
+    description
+}
+
+class groupmember extends BaseType {
+    group
+    member
 }
 
 class timezone extends BaseType {
@@ -16,8 +41,32 @@ class timezone extends BaseType {
     offset
 }
 
+class location extends entity {
+    name
+    address
+    city
+    state
+    zip
+    country
+    lat
+    lng
+    timezone
+}
+
+class keypair {
+    name
+    public
+    private
+    type
+}
+
 export default {
+    "entity": entity,
     "person": person,
-    "nicePerson": nicePerson,
-    "timezone": timezone
+    "employee": employee,
+    "group": group,
+    "groupmember": groupmember,
+    "timezone": timezone,
+    "location": location,
+    "keypair": keypair
 }

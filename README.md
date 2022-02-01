@@ -3,13 +3,17 @@ Lightweight data store
 ![version](https://d25lcipzij17d.cloudfront.net/badge.svg?id=js&type=6&v=0.0.1&x2=0)
 ![size](http://img.badgesize.io/digplan/supramap/master/supramap.mjs)
 
-Transactional, basic type system, code-based queries, simple map-like usage
+Transactional, basic type system, code-based queries, simple map-like usage, functions
 
 Test
 > npx supramap
 
 ````
 const m = new Supramap()
+
+// functions
+await m.loadFunctions()
+console.log(m.functions.now())
 
 // .types
 console.log(m.types)

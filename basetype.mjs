@@ -1,5 +1,5 @@
 export default class BaseType {
-    _id = ''
+    id = ''
     name = ''
     _created = new Date().toISOString()
     _updated = new Date().toISOString()
@@ -14,8 +14,7 @@ export default class BaseType {
                 throw Error(`field ${k} not on type ${mytype}`)
             this[k] = obj[k]
         }
-        this._id = `${mytype}:${obj.name}`
-        this.name = obj.name
+        this.id = `${mytype}:${obj.name}`
     }
     json() {
         return JSON.stringify(this, null, 2)

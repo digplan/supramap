@@ -1,16 +1,23 @@
 import BaseType from './basetype.mjs'
 
-class Person extends BaseType {
+class person extends BaseType {
     age = 40  // default value
     // Street // required value
     upd
 }
 
-class NicePerson extends Person {
+class nicePerson extends person {
    
 }
 
+class timezone extends BaseType {
+    name
+    abbr
+    offset
+}
+
 export default {
-    "Person": Person,
-    "NicePerson": NicePerson
+    "person": person,
+    "nicePerson": nicePerson,
+    "timezone": timezone
 }

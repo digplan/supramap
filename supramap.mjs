@@ -33,15 +33,14 @@ class Supramap extends Map {
         if (!Array.isArray(o))
             o = [o]
         o = o.map(item => {
-            const newrec = eval(`new ${Types[item._type]}()`)
+            const newrec = eval(`new ${this.types[item.id.split(':')[0]]}()`)
             newrec.validate(item)
-            if (this.has(newrec._id))
-                newrec._created = this.get(newrec._id)._created
-            delete newrec._type
+            if (this.has(newrec.id))
+                newrec._created = this.get(newrec.id)._created
             return newrec
         })
         for (const rec of o) {
-            super.set(rec._id, rec)
+            super.set(rec.id, rec)
         }
     }
 

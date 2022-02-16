@@ -1,5 +1,5 @@
-const types_used = (db) => {
+const get_types = (db) => {
     return Object.keys(db).map(id => id.split(':')[0])
 }
 
-export { types_used }
+export { get_types }
